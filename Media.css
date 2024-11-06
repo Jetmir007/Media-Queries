@@ -1,0 +1,67 @@
+.grid-layout{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 30px 2fr 3fr 30px;
+    grid-template-rows: 5px 1fr 3fr 1fr 5px;
+    grid-template-areas: 
+    ". . . ."
+    ". h h ."
+    ". s m ."
+    ". f f ."
+    ". . . .";
+}
+
+header{
+    grid-area: h;
+    background-color: blueviolet;
+    text-align: center;
+    font-size: 300%;
+    font-weight: 900;
+    font-family: 'Times New Roman', serif, sans-serif;
+}
+
+aside{
+    grid-area: s;
+    background-color: aquamarine;
+}
+
+main{
+    grid-area: m;
+    background-color: brown;
+    text-align: center;
+    font-weight: bold;
+    ::selection{
+        background-color: #02a1f2;
+    }
+}
+
+footer{
+    grid-area: f;
+    background-color: darkgoldenrod;
+}
+
+#link{
+    float: inline-end;
+}
+
+a:link {color: yellow;}
+
+a:visited {color: black;}
+
+a:active{color: white;}
+
+@media (max-width:600px) {
+    .grid-layout{
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: 15px 2fr 3fr 15px;
+        grid-template-rows: 1fr  1fr 3fr 1fr;
+        grid-template-areas: 
+        ". h h ."
+        ". s s ."
+        ". m m ."
+        ". f f .";}
+    main{
+        background-color: white;
+    }
+}
