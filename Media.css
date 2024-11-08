@@ -41,7 +41,10 @@ footer{
 }
 
 #link{
-    float: inline-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: not-allowed;
 }
 
 a:link {color: yellow;}
@@ -64,4 +67,8 @@ a:active{color: white;}
     main{
         background-color: white;
     }
+}
+.a{
+    font-family: "Doto", serif;
+    font-weight: 700;
 }
